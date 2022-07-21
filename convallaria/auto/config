@@ -3,14 +3,12 @@
 set -e
 
 lb config noauto \
-	--apt "apt" \
 	--apt-source-archives "false" \
 	--backports "false" \
 	--binary-image "iso-hybrid" \
-	--apt-recommends "false" \
 	--image-name "convallaria" \
 	--iso-publisher "Convallaria_Dev" \
-	--archive-areas "main contrib" \
+	--archive-areas "main contrib non-free" \
 	--system "live" \
 	--architectures "amd64" \
         --mirror-binary "https://mirrors.bfsu.edu.cn/debian" \
