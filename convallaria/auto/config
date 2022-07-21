@@ -3,14 +3,11 @@
 set -e
 
 lb config noauto \
-	--apt-source-archives "false" \
-	--backports "false" \
-	--binary-image "iso-hybrid" \
-	--image-name "convallaria" \
-	--iso-publisher "Convallaria_Dev" \
-	--archive-areas "main contrib non-free" \
-	--system "live" \
-	--architectures "amd64" \
+        --archive-areas "main contrib non-free" \
+        --image-name "convallaria" \
+        --iso-publisher "Convallaria_Dev" \
+        --system "live" \
+        --architectures "amd64" \
         --mirror-binary "https://mirrors.bfsu.edu.cn/debian" \
         --mirror-binary-security "https://mirrors.bfsu.edu.cn/debian-security" \
         --mirror-bootstrap "https://mirrors.bfsu.edu.cn/debian" \
@@ -19,6 +16,6 @@ lb config noauto \
         --mirror-debian-installer "https://mirrors.bfsu.edu.cn/debian" \
 "${@}"
 
-cp ../build-res/packages ./config/package-lists/standard.list.chroot
+cp /root/build-res/packages /root/convallaria/config/package-lists/standard.list.chroot
 
-cp ../build-res/init ./config/hooks/live/Convallaria.hook.chroot
+cp /root/build-res/init /root/convallaria/config/hooks/live/Convallaria.hook.chroot

@@ -1,7 +1,6 @@
 #!/bin/bash
-ln -s /lib/systemd/systemd /sbin/init
-echo "ConvallariaLinux Installer Joshua@build1" | tee /etc/motd
+echo "Convallaria Linux Installer Joshua@build1" >/etc/motd
 curl https://cdngit.ruzhtw.top/pkghub/ctpkg > ctpkg && fish ctpkg grab upd && fish ctpkg grab ctpkg -y
-echo "convallaria=https://convallaria.ruzhtw.top/" | tee -a /etc/centerlinux/conf.d/ctpkg.source
+echo "convallaria=https://convallaria.ruzhtw.top/" >>/etc/centerlinux/conf.d/ctpkg.source
 ctpkg grab upd
 ctpkg grab neofetch cva-id cva-installer -y

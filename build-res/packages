@@ -4,4 +4,4 @@ wget
 fish
 util-linux
 e2fsprogs
-grub
+debootstrap
