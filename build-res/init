@@ -1,6 +1,8 @@
 #!/bin/bash
-echo "Convallaria Linux Installer Joshua@build1" >/etc/motd
 curl https://cdngit.ruzhtw.top/pkghub/ctpkg > ctpkg && fish ctpkg grab upd && fish ctpkg grab ctpkg -y
 echo "convallaria=https://convallaria.ruzhtw.top/" >>/etc/centerlinux/conf.d/ctpkg.source
 ctpkg grab upd
 ctpkg grab neofetch cva-id cva-installer -y
+echo "Convallaria Linux Installer Joshua@build1" >/etc/motd
+echo "convallaria" >/etc/hostname
+echo "127.0.0.1 convallaria" >>/etc/hosts
